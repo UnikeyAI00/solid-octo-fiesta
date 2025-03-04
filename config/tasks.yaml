@@ -1,1 +1,28 @@
+scrape_rbi_task:
+  description: >
+    Visit the RBI website and extract all relevant regulatory documents, including Notifications,
+    Master Circulars, and Master Directions.
+  expected_output: >
+    A collection of extracted texts from RBI website, sorted by document type and date.
+  tools:
+    - web_scraping_tool
+  agent: regulatory_scraper
+
+analyze_compliance_task:
+  description: >
+    Review the extracted regulatory content and break it down into specific compliance obligations
+    and risk mitigation strategies.
+  expected_output: >
+    A structured summary highlighting key compliance obligations and associated risk mitigation measures.
+  tools:
+    - text_summarization_tool
+    - risk_analysis_tool
+  agent: risk_analyst
+
+generate_report_task:
+  description: >
+    Structure the analyzed data into a well-formatted, para-wise report on regulatory obligations and risk mitigation.
+  expected_output: >
+    A detailed, structured report with regulatory obligations and risk mitigation steps for each RBI notification.
+  agent: compliance_writer
 
